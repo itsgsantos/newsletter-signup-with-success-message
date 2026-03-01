@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+
+    <main id="component">
+      <picture class="illustration">
+        <source
+          media="(min-width: 768px)"
+          srcset="./assets/images/illustration-sign-up-desktop.svg"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="illustration-sign-up"
+        />
+      </picture>
+
+      <section class="content-wrapper">
+        <div class="heading-wrapper">
+          <h1 class="heading1">Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        </div>
+
+        <ul class="features-list">
+          <li>
+            <img src="./assets/images/icon-list.svg" />Product discovery and
+            building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" />Measuring to ensure
+            updates are a success
+          </li>
+          <li><img src="./assets/images/icon-list.svg" />And much more!</li>
+        </ul>
+        <form novalidate id="subscribe" action="" method="post">
+          <div>
+            <div class="label-wrapper">
+              <label for="email">Email address</label>
+              <span for="email" class="invalid">Valid email required</span>
+            </div>
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              id="email"
+              placeholder="email@company.com"
+              required
+            />
+          </div>
+          <input type="submit" data-subscribe value="Subscribe to monthly newsletter" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Sign-up form end -->
+
+    <section data-success class="success-message-wrapper">
+      <!-- Success message start -->
+       <div>
+        <img src="./assets/images/icon-success.svg" alt="">
+        <h1 class="heading1">Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <strong data-email></strong>. Please open it and click the button inside to confirm your subscription.
+        </p>
+       </div>
+      <button data-dismiss class="dismiss">Dismiss message</button>
+    </main>
+  </section>
+  <!-- Success message end -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
